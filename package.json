@@ -4,10 +4,31 @@
   "main": "index.js",
   "author": "Andres Chaves <andres1009_93@hotmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev-server": "webpack-dev-server"
+  },
   "dependencies": {
+    "node-sass": "^4.9.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^2.0.0",
+    "postcss-loader": "^3.0.0",
+    "precss": "^3.1.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.1",
+    "url-loader": "^1.1.1",
+    "webpack": "3.1.0",
+    "webpack-dev-server": "2.5.1"
   }
 }
