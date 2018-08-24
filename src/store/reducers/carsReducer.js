@@ -12,15 +12,21 @@ export default (state = carsDefaultState, action) => {
     case 'START_COMPARISON':
       return state.map((car) => car.id === action.carId ? 
           {
-            compare: true,
-            ...car
+            ...car,
+            compare: true
           } : car);
     case 'STOP_COMPARISON':
       return state.map((car) => car.id === action.carId ? 
             {
-              compare: false,
-              ...car
+              ...car,
+              compare: false
             } : car);
+    case 'SWITCH_COMPARISON':
+      return state.map((car) => car.id === action.carId ? 
+          {
+            ...car,
+            compare: !car.compare,
+          } : car);
     default:
       return state;
   }

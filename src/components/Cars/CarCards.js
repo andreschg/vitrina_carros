@@ -35,7 +35,7 @@ class CarsPage extends React.Component {
           this.state.filter.length > 0 ? brand.toLowerCase().includes(this.state.filter.toLowerCase()) : true
           )
           .map((car) => (
-            <CarCard {...car} onCarClick={this.props.onCardClick} />
+            <CarCard key={car.id} {...car} onCarClick={this.props.onCardClick} />
           ))}
       </Row>
     );

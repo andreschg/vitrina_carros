@@ -3,7 +3,7 @@ import { Navbar, NavItem, Nav, MenuItem, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Navigation = () => (
-  <Navbar className="cars-navbar">
+  <Navbar inverse className="cars-navbar" fixedTop={true}>
     <Navbar.Header>
       <Navbar.Brand>
         <Link to="/">Vitrina Carros</Link>

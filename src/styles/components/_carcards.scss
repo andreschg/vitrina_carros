@@ -1,6 +1,10 @@
 .car-card {
   cursor: pointer;
 
+  .panel-heading {
+    background-color: $light-gray;
+  }
+
   .panel-heading,
   .panel-footer {
     text-align: center;
@@ -21,4 +25,14 @@
 
 .cars-filter {
   margin-bottom: 25px;
+}
+
+.comparables {
+  .car-card {
+    &.selected {
+      .panel-heading {
+        background-color: $blue;
+      }
+    }
+  }
 }

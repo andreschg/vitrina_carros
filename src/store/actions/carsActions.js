@@ -18,3 +18,10 @@ export const stopComparison = (carId) => {
     carId
   }
 }
+
+export const switchComparison = (carId) => {
+  return {
+    type: 'SWITCH_COMPARISON',
+    carId
+  }
+}

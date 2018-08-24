@@ -8,7 +8,7 @@ import ChooseComparables from '../components/ChooseComparables';
 
 const AppRouter = () => (
   <BrowserRouter>
-    <div>
+    <div className="app-body">
       <Navigation />
       <Switch>
         <Route path="/" component={MainSection} exact={true} />
