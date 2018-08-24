@@ -1,11 +1,12 @@
 import React from 'react';
 import { Navbar, NavItem, Nav, MenuItem, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => (
   <Navbar>
     <Navbar.Header>
       <Navbar.Brand>
-        <a href="#home">Vitrina Carros</a>
+        <Link to="/">Vitrina Carros</Link>
       </Navbar.Brand>
     </Navbar.Header>
     <Nav>
