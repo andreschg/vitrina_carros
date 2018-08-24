@@ -5,6 +5,7 @@
   "author": "Andres Chaves <andres1009_93@hotmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "webpack",
     "dev-server": "webpack-dev-server"
   },
   "dependencies": {
