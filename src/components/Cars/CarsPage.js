@@ -27,7 +27,7 @@ class CarsPage extends React.Component {
       <Grid>
         <Row>
           <Col md={12}>
-            <InputGroup>
+            <InputGroup className="cars-filter" >
               <FormControl 
                 type="text" 
                 value={this.state.filter}

@@ -14,7 +14,7 @@ const CarDetail = (props) => (
           Mas información
         </Panel.Heading>
         <Panel.Body>
-          <Table>
+          <Table responsive>
             <tbody>
               <tr>
                 <td>Transmisión:</td>

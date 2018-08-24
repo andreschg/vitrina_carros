@@ -1,5 +1,10 @@
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
+@import "./base/base";
+@import "./base/variables";
+
+@import "./components/navbar";
 @import "./components/carcards";
+@import "./components/panels";
 @import "./components/cars-details";
