@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import 'bootstrap-sass';
-import { Navbar, Navm, NavItem } from 'react-bootstrap';
-
-import MainComponent from './components/MainComponent';
+import AppRouter from './routes/AppRouter';
+import store from './store/configureStore';
+import { addCar } from './store/actions/carsActions';
 import './styles/style.scss';
+import * as carsJSON from '../assets/carros.json';
 
 const App = () => (
-  <div>
-    <Navbar inverse className="navbar-vi" >
-      <Navbar.Header>
-        <span>Vitrina</span>
-      </Navbar.Header>
-    </Navbar>
-    <MainComponent />
-  </div>
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
 );
 
 ReactDOM.render(
@@ -22,3 +19,14 @@ ReactDOM.render(
   document.getElementById('app')
 );
 
+carsJSON.default.forEach(({ brand, cars }) => {
+  cars.forEach(({ id, year, model, price, img }) => {
+    store.dispatch(addCar({
+      id,
+      brand,
+      model,
+      year,
+      price
+    }));
+  });
+});
