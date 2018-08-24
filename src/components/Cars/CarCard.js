@@ -1,4 +1,5 @@
 import React from 'react';
+import { Col } from 'react-bootstrap';
 
 export default class CarCard extends React.Component {
 
@@ -8,9 +9,11 @@ export default class CarCard extends React.Component {
 
   render() {
     return (
-      <div className="car-card">
-        <h2>this.props.model</h2>
-      </div>
+      <Col xs={12} md={4} >
+        <div className="car-card">
+          <h2>{this.props.model}</h2>
+        </div>
+      </Col>
     );
   }
 }
