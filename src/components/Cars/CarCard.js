@@ -10,7 +10,7 @@ export default class CarCard extends React.Component {
   render() {
     return (
       <Col xs={12} md={4} >
-        <Panel className="car-card">
+        <Panel className="car-card" onClick={() => { this.props.onCarClick(this.props.id); }}>
           <Panel.Heading>{this.props.brand} {this.props.model} ({this.props.year})</Panel.Heading>
           <Panel.Body>
             <img className="car-card-thumbnail" src={this.props.img} />

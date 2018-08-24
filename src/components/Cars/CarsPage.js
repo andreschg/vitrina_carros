@@ -18,6 +18,10 @@ class CarsPage extends React.Component {
     });
   }
 
+  onCarClick = (id) => {
+    this.props.history.push(`/car/${id}`);
+  }
+
   render() {
     return (
       <Grid>
@@ -38,7 +42,7 @@ class CarsPage extends React.Component {
               this.state.filter.length > 0 ? brand.toLowerCase().includes(this.state.filter.toLowerCase()) : true
             )
             .map((car) => (
-              <CarCard {...car}/>
+              <CarCard {...car} onCarClick={this.onCarClick} />
             ))}
         </Row>
       </Grid>

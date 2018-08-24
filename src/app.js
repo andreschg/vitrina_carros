@@ -14,20 +14,16 @@ const App = () => (
   </Provider>
 );
 
+carsJSON.default.forEach(({ brand, cars }) => {
+  cars.forEach((car) => {
+    store.dispatch(addCar({
+      brand,
+      ...car
+    }));
+  });
+});
+
 ReactDOM.render(
   <App />,
   document.getElementById('app')
 );
-
-carsJSON.default.forEach(({ brand, cars }) => {
-  cars.forEach(({ id, year, model, price, img }) => {
-    store.dispatch(addCar({
-      id,
-      brand,
-      model,
-      year,
-      price,
-      img
-    }));
-  });
-});
