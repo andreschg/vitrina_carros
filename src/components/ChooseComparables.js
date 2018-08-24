@@ -22,7 +22,7 @@ class ChooseComparables extends React.Component {
               En esta sección puedes seleccionar varios autos para luego ser desplegados en una tabla comparativa.<br/>Los autos seleccionados se tornaran de un color diferente y no puedes seleccionar más de tres.
             </Col>
             <Col md={4}>
-              <Link to="" className="btn btn-default pull-right" >Ver Tabla Comparativa</Link>
+              <Link to="/comparation-table" className="btn btn-default pull-right" >Ver Tabla Comparativa</Link>
             </Col>
           </Row>
         </Alert>
