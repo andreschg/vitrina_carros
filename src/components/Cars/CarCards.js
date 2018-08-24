@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Row, Col, InputGroup, FormControl, Button } from 'react-bootstrap';
+import { Row, Col, InputGroup, FormControl, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import CarCard from './CarCard';
 
@@ -21,15 +21,17 @@ class CarsPage extends React.Component {
   render() {
     return (
       <Row>
-      <InputGroup className="cars-filter" >
-        <FormControl 
-          type="text" 
-          value={this.state.filter}
-          onChange={this.onFilterChange} />
-        <InputGroup.Button>
-          <Button>Filtrar por marca</Button>
-        </InputGroup.Button>
-      </InputGroup>
+        <Col xs={12}>
+          <InputGroup className="cars-filter" >
+            <FormControl 
+              type="text" 
+              value={this.state.filter}
+              onChange={this.onFilterChange} />
+            <InputGroup.Button>
+              <Button>Filtrar por marca</Button>
+            </InputGroup.Button>
+          </InputGroup>
+        </Col>
       { this.props.cars.length > 0 && 
         this.props.cars.filter(({brand}) => 
           this.state.filter.length > 0 ? brand.toLowerCase().includes(this.state.filter.toLowerCase()) : true

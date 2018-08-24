@@ -16,7 +16,7 @@ class ComparationTable extends React.Component {
   render() {
     return (
       <Grid>
-        <Table responsive>
+        <Table responsive striped condensed hover>
           <thead>
             <tr>
               <th>Marca</th>

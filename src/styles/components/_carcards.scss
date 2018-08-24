@@ -8,6 +8,7 @@
   .panel-heading,
   .panel-footer {
     text-align: center;
+    font-weight: bold;
   }
 
   .panel-body {
@@ -32,6 +33,7 @@
     &.selected {
       .panel-heading {
         background-color: $blue;
+        color: $white;
       }
     }
   }

@@ -18,11 +18,11 @@ class ChooseComparables extends React.Component {
       <Grid className="comparables">
         <Alert bsStyle="info">
           <Row>
-            <Col md={8}>
+            <Col xs={12} sm={7} md={8}>
               En esta sección puedes seleccionar varios autos para luego ser desplegados en una tabla comparativa.<br/>Los autos seleccionados se tornaran de un color diferente y no puedes seleccionar más de tres.
             </Col>
-            <Col md={4}>
-              <Link to="/comparation-table" className="btn btn-default pull-right" >Ver Tabla Comparativa</Link>
+            <Col xs={12} sm={5} md={4}>
+              <Link to="/comparation-table" className="btn btn-default center-block" >Ver Tabla Comparativa</Link>
             </Col>
           </Row>
         </Alert>
