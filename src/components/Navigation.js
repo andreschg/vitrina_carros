@@ -9,12 +9,9 @@ const Navigation = () => (
         <Link to="/">Vitrina Carros</Link>
       </Navbar.Brand>
     </Navbar.Header>
-    <Nav>
-      <NavItem eventKey={1} href="#">
-        Link
-      </NavItem>
-      <NavItem eventKey={2} href="#">
-        Link
+    <Nav pullRight>
+      <NavItem>
+        <Link to="/compare">Comparar autos</Link>
       </NavItem>
     </Nav>
   </Navbar>

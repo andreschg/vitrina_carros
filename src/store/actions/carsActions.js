@@ -4,3 +4,17 @@ export const addCar = (car) => {
     car
   }
 }
+
+export const startComparison = (carId) => {
+  return {
+    type: 'START_COMPARISON',
+    carId
+  }
+}
+
+export const stopComparison = (carId) => {
+  return {
+    type: 'STOP_COMPARISON',
+    carId
+  }
+}

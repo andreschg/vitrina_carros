@@ -17,6 +17,7 @@ const App = () => (
 carsJSON.default.forEach(({ brand, cars }) => {
   cars.forEach((car) => {
     store.dispatch(addCar({
+      compare: false,
       brand,
       ...car
     }));
