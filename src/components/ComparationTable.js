@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import numeral from 'numeral';
 
@@ -25,6 +26,7 @@ class ComparationTable extends React.Component {
               <th>Combustible</th>
               <th>Transmisión</th>
               <th>Kilometraje</th>
+              <th>Link</th>
             </tr>
           </thead>
           <tbody>
@@ -37,6 +39,7 @@ class ComparationTable extends React.Component {
                 <td>{car.fuel}</td>
                 <td>{car.transmission}</td>
                 <td>{numeral(car.mileage).format('0,0[.]00 km')}</td>
+                <td><Link to={`/car/${car.id}`}>Ver Auto</Link></td>
               </tr>
             ))}
           </tbody>
