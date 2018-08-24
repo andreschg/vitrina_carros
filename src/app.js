@@ -26,7 +26,8 @@ carsJSON.default.forEach(({ brand, cars }) => {
       brand,
       model,
       year,
-      price
+      price,
+      img
     }));
   });
 });
