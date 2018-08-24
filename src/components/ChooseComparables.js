@@ -1,6 +1,7 @@
 import React from 'react';
-import { Grid, Alert } from 'react-bootstrap';
+import { Grid, Row, Col, Alert } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import CarCards from './Cars/CarCards';
 import { switchComparison } from '../store/actions/carsActions';
 
@@ -15,7 +16,16 @@ class ChooseComparables extends React.Component {
   render() {
     return (
       <Grid className="comparables">
-        <Alert bsStyle="info">En esta sección puedes seleccionar varios autos para luego ser desplegados en una tabla comparativa.<br/>Los autos seleccionados se tornaran de un color diferente y no puedes seleccionar más de tres.</Alert>
+        <Alert bsStyle="info">
+          <Row>
+            <Col md={8}>
+              En esta sección puedes seleccionar varios autos para luego ser desplegados en una tabla comparativa.<br/>Los autos seleccionados se tornaran de un color diferente y no puedes seleccionar más de tres.
+            </Col>
+            <Col md={4}>
+              <Link to="" className="btn btn-default pull-right" >Ver Tabla Comparativa</Link>
+            </Col>
+          </Row>
+        </Alert>
         <CarCards onCardClick={this.onCardClick} />
       </Grid>
     );
